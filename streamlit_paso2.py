@@ -26,6 +26,11 @@ modelo_seleccionado = st.sidebar.selectbox(
 modo = st.sidebar.radio("Modo:", ["Preciso", "Creativo"])
 temperatura = 0.2 if modo == "Preciso" else 0.9
 
+# Slider de temperatura
+temperatura = st.sidebar.slider(
+    "Temperatura:", 0.0, 1.0, 0.7, 0.1
+)
+
 # 1.1 – Max tokens
 max_tokens = st.sidebar.number_input(
     "Tokens máximos:",
